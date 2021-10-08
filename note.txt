@@ -1,0 +1,146 @@
+uadmin@master-PC:~$ sudo openconnect --protocol=gp vpn-dfa.jfsc.jus.br
+[sudo] senha para uadmin: 
+Verificação Bem-sucedida
+POST https://vpn-dfa.jfsc.jus.br/ssl-vpn/prelogin.esp?tmp=tmp&clientVer=4100&clientos=Linux
+Conectado a 170.80.5.237:443
+Negociação SSL com vpn-dfa.jfsc.jus.br
+Conectado a HTTPS em vpn-dfa.jfsc.jus.br
+Enter login credentials
+Username: cev82
+Password: 
+POST https://vpn-dfa.jfsc.jus.br/ssl-vpn/login.esp
+Desafio: Multiple challenges submitted.
+Multiple challenges submitted.
+Desafio: 
+POST https://vpn-dfa.jfsc.jus.br/ssl-vpn/login.esp
+Login GlobalProtect retornou authentication-source=AP-LINOTP-VPN
+POST https://vpn-dfa.jfsc.jus.br/ssl-vpn/getconfig.esp
+Tempo limite do túnel (intervalo de renovação de chave) é 180 minutos.
+Tempo limite de ociosidade é 180 minutos.
+Nenhum MTU foi recebido. Calculado 1422 para ESP tunnel
+POST https://vpn-dfa.jfsc.jus.br/ssl-vpn/hipreportcheck.esp
+Conectado como 10.5.22.205, usando SSL, com ESP em progresso
+Sessão ESP estabelecida com o servidor
+Túnel ESP conectado; saindo do loop principal de HTTPS.
+ESP detectou par morto
+Falha ao conectar a túnel ESP; usando HTTPS.
+^CConexão de socket cancelada
+Falha ao reconectar ao host vpn-dfa.jfsc.jus.br: Chamada de sistema interrompida
+POST https://vpn-dfa.jfsc.jus.br/ssl-vpn/logout.esp
+^CConexão de socket cancelada
+Falha ao reconectar ao host vpn-dfa.jfsc.jus.br: Chamada de sistema interrompida
+Falhou ao abrir conexão HTTPS para vpn-dfa.jfsc.jus.br
+Desconexão falhou
+RTNETLINK answers: No such process
+RTNETLINK answers: No such process
+RTNETLINK answers: No such process
+Erro desconhecido; saída.
+^Cuadmin@master-PC:~sudo openconnect --protocol=gp vpn-dfa.jfsc.jus.br --user=cev82 --pwd=StarTr3k1701NCC
+[sudo] senha para uadmin: 
+A verificação da senha falhou; restam 4 tentativas
+Sinto muito, tente novamente.
+[sudo] senha para uadmin: 
+Verificação Bem-sucedida
+openconnect: opção não reconhecida “--pwd=StarTr3k1701NCC”
+Uso:  openconnect [opções] <servidor>
+Cliente aberto para múltiplos protocolos VPN, versão v8.02.1-1+dde
+
+Usando GnuTLS. Recursos presentes: TPMv2, PKCS#11, RSA software token, HOTP software token, TOTP software token, Yubikey OATH, System keys, DTLS, ESP
+      --config=CONFIGFILE         Lê as opções do arquivo de configuração
+  -V, --version                   Informa o número da versão
+  -h, --help                      Exibe o texto de ajuda
+
+Definir protocolo VPN:
+      --protocol=anyconnect       Compatible with Cisco AnyConnect SSL VPN, as well as ocserv (padrão)
+      --protocol=nc               Compatible with Juniper Network Connect / Pulse Secure SSL VPN
+      --protocol=gp               Compatible with Palo Alto Networks (PAN) GlobalProtect SSL VPN
+
+Autenticação:
+  -u, --user=NAME                 Define o nome de usuário do login
+      --no-passwd                 Desabilita autenticação por senha/SecurID
+      --non-inter                 Não espera entrada do usuário - sai se for requisitado
+      --passwd-on-stdin           Lê senha da entrada padrão
+      --authgroup=GROUP           Escolhe a seleção de login para autenticação
+  -F, --form-field=FORM:OPT=VALUE Provide authentication form responses
+  -c, --certificate=CERT          Usa o certificado CERT do cliente SSL
+  -k, --sslkey=KEY                Usa o arquivo KEY de chave privada SSL
+  -e, --cert-expire-warning=DAYS  Avisa quando o tempo de vida do certificado < DAYS
+  -g, --usergroup=GROUP           Define o grupo de usuário do login
+  -p, --key-password=PASS         Define a frase secreta chave ou TPM SRK PIN
+      --key-password-from-fsid    Frase secreta chave é fsid do sistema de arquivos
+      --token-mode=MODE           Tipo de token de software: rsa, totp ou hotp
+      --token-secret=STRING       Segredo de token de software
+
+Validação de servidor:
+      --servercert=FINGERPRINT    Impressão digital SHA1 do certificado do servidor
+      --no-cert-check             Não exige que o certificado SSL do servidor seja válido
+      --no-system-trust           Desabilita autoridades certificadoras padrão do sistema
+      --cafile=FILE               Arquivo de certificado para verificação do servidor
+
+Conectividade de internet:
+  -P, --proxy=URL                 Define o servidor proxy
+      --proxy-auth=METHODS        Define os métodos de autenticação de proxy
+      --no-proxy                  Desabilita o proxy
+      --libproxy                  Usa libproxy para configurar automaticamente o proxy
+      --reconnect-timeout         Limite de tempo em segundos para nova tentativa de conexão
+      --resolve=HOST:IP           Usar IP ao conectar ao HOST
+      --passtos                   Copia TOS / TCLASS ao usar DTLS
+      --dtls-local-port=PORT      Define a porta local para datagramas DTLS e ESP
+
+Autenticação (duas fases):
+  -C, --cookie=COOKIE             Usa o cookie de autenticação COOKIE
+      --cookie-on-stdin           Lê o cookie da entrada padrão
+      --authenticate              Só autentica e imprime informação de login
+      --cookieonly                Obtém e imprime cookie apenas; não conecta
+      --printcookie               Imprime o cookie antes de conectar
+
+Controle de processo:
+  -b, --background                Continua em plano de fundo após inicialização
+      --pid-file=PIDFILE          Escreve o PID do daemon neste arquivo
+  -U, --setuid=USER               Descarta privilégios após conexão
+
+Registro de log (duas fases):
+  -l, --syslog                    Usa syslog para as mensagens de progresso
+  -v, --verbose                   Mais saída
+  -q, --quiet                     Menos saída
+      --dump-http-traffic         Despeja o tráfego de autenticação HTTP (--verbose implícito)
+      --timestamp                 Prefixa marca de tempo nas mensagens de progresso
+
+Script de configuração de VPN:
+  -i, --interface=IFNAME          Usa IFNAME para a interface do túnel
+  -s, --script=SCRIPT             Linha de comando shell para usar um script de configuração compatível com vpnc
+                                  padrão: "/usr/share/vpnc-scripts/vpnc-script"
+  -S, --script-tun                Passa tráfego para o programa "script", ao invés do tun
+
+Controle de túnel:
+      --disable-ipv6              Não solicita conectividade em IPv6
+  -x, --xmlconfig=CONFIG          Arquivo de configuração XML
+  -m, --mtu=MTU                   Requisita MTU do servidor (servidores legado apenas)
+      --base-mtu=MTU              Indica MTU do caminho de/para o servidor
+  -d, --deflate                   Habilita compressão stateful (padrão é apenas stateful)
+  -D, --no-deflate                Desabilita toda compressão
+      --force-dpd=INTERVAL        Define um intervalo mínimo de Dead Peer Detection
+      --pfs                       Exige perfect forward secrecy (PFS)
+      --no-dtls                   Desabilita DTLS e ESP
+      --dtls-ciphers=LIST         Cifras de OpenSSL a serem suportadas para DTLS
+  -Q, --queue-len=LEN             Define limite da fila de pacotes para LEN pkts
+
+Informações do sistema local:
+      --useragent=STRING          Campo User-Agent: do cabeçalho de HTTP
+      --local-hostname=STRING     Hostname local a ser anunciado ao servidor
+      --os=STRING                 Tipo de SO (linux,linux-64,mac,win,...) para informar
+      --version-string=STRING     reported version string during authentication
+                                  (default: v8.02.1-1+dde)
+
+Execução do binário de trojan (CSD):
+      --csd-user=USER             Descarta privilégios durante execução de trojan
+      --csd-wrapper=SCRIPT        Executa SCRIPT ao invés do binário do trojan
+
+Bugs do servidor:
+      --no-http-keepalive         Desabilita reuso de conexão HTTP
+      --no-xmlpost                Não tenta autenticação XML POST
+
+Para assistência com OpenConnect, por favor veja a página web em
+  http://www.infradead.org/openconnect/mail.html
+uadmin@master-PC:~$ sudo openconnect --protocol=gp vpn-dfa.jfsc.jus.br/gateway --Username=cev82 --form-entry main:password=StarTr3k1701NCC --background --setuid=uadmin  
+
