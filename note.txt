@@ -142,5 +142,6 @@ Bugs do servidor:
 
 Para assistência com OpenConnect, por favor veja a página web em
   http://www.infradead.org/openconnect/mail.html
-uadmin@master-PC:~$ sudo openconnect --protocol=gp vpn-dfa.jfsc.jus.br/gateway --Username=cev82 --form-entry main:password=StarTr3k1701NCC --background --setuid=uadmin  
+uadmin@master-PC:~$ sudo openconnect --protocol=gp vpn-dfa.jfsc.jus.br/gateway --Username=cev82 --form-entry main:Password=StarTr3k1701NCC --background --setuid=uadmin  
 
+StarTr3k1701NCC
